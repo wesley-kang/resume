@@ -263,6 +263,40 @@ const projects = reactive({
       projectUrl: '',
       demoUrl: '' // 
    
+    },
+    {
+      id: 3,
+      name: 'Extract Features For Search Engine',
+      period: 'April 2022 - May 2023',
+      role: 'Contributor',
+      description: "a search engine is essentially building a comprehensive profile of you." + 
+      " It starts with your behavior—what you've searched for, what you've clicked on, and how " + 
+      " long you've stayed on a page. This tells it about your interests and intent. It then combines " + 
+      " this with basic demographic data like your location and device type, which helps provide context. " +
+      " Finally, it analyzes your real-time actions within a single session and your long-term habits to get a full picture, " + 
+      " allowing the system to deliver highly personalized and relevant results that anticipate what you're looking for, "+
+       "even before you've fully typed it out.",
+      technologies: ['c++','python'],
+      achievements: [' improving relevance and personalization'],
+      // projectUrl: 'https://gitee.com/hengk/ctpn',
+      // demoUrl: '' // 新增
+    },
+    {
+      id: 4,
+      name: 'A Simple Transportation Management System',
+      period: 'June 2023 - Present',
+      role: 'Responsible person',
+      description: "A Transportation Management System (TMS) is a comprehensive software platform designed to streamline " + 
+      " and optimize the planning, execution, and monitoring of freight movement. It enables logistics companies to efficiently" + 
+      " manage transportation operations by automating key processes such as route planning, load optimization, carrier selection," +
+      " shipment tracking, and freight settlement. A TMS provides real-time visibility into in-transit goods through GPS tracking," + 
+      " supports electronic proof of delivery (ePOD), and facilitates collaboration among shippers, carriers, and customers." +
+      " By integrating with other enterprise systems like ERP and WMS, it enhances decision-making through data analytics and" + 
+      "reporting, ultimately helping organizations reduce transportation costs, improve delivery performance, and increase customer" + 
+      " satisfaction.",
+      technologies: ['vue','python', 'golang'],
+      achievements: ['Deliver goods to their destination at lower cost, faster speed, and higher safety.'],
+      demoUrl: 'http://49.232.89.148:8888/' // 新增
     }
   ]
 })
@@ -409,10 +443,10 @@ const currentCertificates = computed(() => certificates[currentLang.value])
                 <span class="link-icon">🔗</span>
                 {{ currentLang === 'zh' ? '项目地址' : 'Project URL' }}
               </a>
-              <!-- <a v-if="project.demoUrl" :href="project.demoUrl" target="_blank" class="project-link demo-link">
+               <a v-if="project.demoUrl" :href="project.demoUrl" target="_blank" class="project-link demo-link">
                 <span class="link-icon">🚀</span>
                 {{ currentLang === 'zh' ? '在线演示' : 'Live Demo' }}
-              </a> -->
+              </a>
             </div>
             <div class="project-tech">
               <span v-for="tech in project.technologies" :key="tech" class="tech-tag">{{ tech }}</span>
