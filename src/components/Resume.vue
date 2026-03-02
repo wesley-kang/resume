@@ -82,7 +82,8 @@ const skills = ref([
   { name: 'Golang', level: 80, category: 'backend' },
   { name: 'Vue.js', level: 90, category: 'frontend' },
   { name: 'TypeScript', level: 80, category: 'frontend' },
-  { name: 'JavaScript', level: 80, category: 'frontend' }
+  { name: 'JavaScript', level: 80, category: 'frontend' },
+  { name: 'Flutter', level: 75, category: 'frontend' }
 ])
 
 // 工作经验数据（双语）
@@ -116,53 +117,16 @@ const experience = reactive({
     }
   ],
   en: [
-    {
-    id: 1,
-    position: 'Software Engineer',
-    company: 'Peking University Software Engineering Center',
-    period: 'June 2016 - July 2019',
-    location: 'Beijing',
-    duties: [
-        'Responsible for software architecture design and development of main products',
-        'Led team to complete software development of multiple large-scale projects',
-        'Optimized project performance, improved user experience',
-        'Established development standards and best practices'
-      ]
-    },
-    {
-      id: 2,
-      position: 'Software Engineer',
-      company: 'Institute of Automation, Chinese Academy of Sciences',
-      period: 'August 2019 - March 2022',
-      location: 'Beijing',
-      duties: [
-        'Implement the algorithm from the paper and try to achieve the results mentioned in the article.',
-        'Integrate the algorithm into a real product.',
-        'Continuously iterate on the product based on real-world performance.',
-      ]
-    },
      {
-      id: 3,
+      id: 1,
       position: 'Software Engineer',
       company: 'Baidu, Inc.',
-      period: 'April 2022 - May 2023',
+      period: 'April 2021 - Present',
       location: 'Shenzhen',
       duties: [
-        'eveloping and maintaining core software systems for various products',
+        'Developing and maintaining core software systems for various products',
         'Collaborating with product managers and other engineering teams to define requirements and implement features that improve user experience.',
         'Optimizing system performance and stability by conducting code reviews, troubleshooting issues, and implementing bug fixes',
-      ]
-    },
-    {
-      id: 4,
-      position: 'Software Engineer',
-      company: 'Wuhan Fengyi Logistics Co., Ltd.',
-      period: 'June 2023 - Present',
-      location: 'Shenzhen',
-      duties: [
-        'Responsible for the digitalization of company business processes.',
-        'Establish a  development team.',
-        'tablish a strict development process.',
       ]
     }
   ]
@@ -227,77 +191,30 @@ const projects = reactive({
   en: [
     {
       id: 1,
-      name: 'A Robust Text Region Detection Algorithm',
-      period: 'Jun 2016 - Jul 2019',
+      name: 'Paxiy Instant Messaging Client',
+      period: 'Jun 2025 - Present',
       role: 'Responsible person',
-      description: 'This text detection algorithm is built upon the Connectionist Text Proposal Network (CTPN),'+
-      ' a deep learning framework specifically designed for accurate and robust detection of text in natural scene images.' +
-      'The algorithm first extracts convolutional feature maps from the input image using a Convolutional Neural Network (CNN),'+
-      ' typically VGG16. A bidirectional LSTM (Bi-LSTM) layer is then applied on top of these features to capture sequential patterns in horizontal text lines,' + 
-      " enhancing the model's ability to understand context along the width of text regions.",
-      technologies: ['c++', 'tensorflow'],
+      description: 'It is a Flutter-based mobile instant messaging client that integrates OpenIM capabilities' +
+      'and extends features such as circles/posts, following, and multimedia content. It provides an integrated' +
+      'chat and community experience specifically for the Android and ios platform.',
+      technologies: ['flutter', 'vue'],
       achievements: ['Improved system response speed by 40%', 'Accuracy reached 95%'],
       projectUrl: 'https://gitee.com/hengk/ctpn',
       demoUrl: '' // 新增
     },
     {
       id: 2,
-      name: 'A Fast Water Meter Text Recognition Algorithm',
-      period: 'Aug 2019 - Mar 2022',
+      name: 'Paxiy Instant Messaging Server',
+      period: 'Jun 2025 - Present',
       role: 'Responsible person',
-      description: 'This project is a water meter text recognition algorithm. The algorithm is based on the deep learning'+
-      ' framework caffe. The algorithm is trained on a dataset of water meter images.' +
-      ' The algorithm is able to recognize the text on the water meter. The algorithm is fast and accurate.' +
-      'The proposed algorithm is a unified pipeline for end-to-end scene text reading, combining the strengths' + 
-      ' of the SSD (Single Shot MultiBox Detector) for text detection and the CRNN (Convolutional Recurrent ' + 
-      'Neural Network) for text recognition. In the first stage, SSD is employed to rapidly and accurately localize text'+
-      ' regions within the input image. Leveraging its multi-scale feature maps and single-shot detection mechanism, SSD ' + 
-      'efficiently generates bounding boxes around potential text instances, even under varying scales and orientations.' + 
-      ' This stage ensures real-time performance, which is critical for applications on resource-constrained devices.' + 
-      'he detected text regions are then cropped and fed into the CRNN model for recognition. CRNN combines convolutional' + 
-      ' layers to extract visual features, bidirectional LSTM layers to model contextual information along the sequence, and ' + 
-      ' a Connectionist Temporal Classification (CTC) layer to transcribe the features into character sequences without requiring ' + 
-      ' character segmentation. This enables robust recognition of text strings with diverse fonts, colors, and backgrounds.',
-      achievements: ['Improved system response speed by 50%', 'Accuracy reached 95%'],
-      technologies: ['c++', 'caffe'],
-      projectUrl: '',
-      demoUrl: '' // 
-   
+      description: 'It is the backend service for Paxiy, built on Go/Gin and GORM.' + 
+      ' It provides APIs for user management, circles, posts, following, favorites,' + 
+      ' payments, and version control, while handling data persistence and permission validation.',
+      technologies: ['golang'],
+      achievements: ['Improved system response speed by 40%', 'Accuracy reached 95%'],
+      projectUrl: 'https://gitee.com/hengk/ctpn',
+      demoUrl: '' // 新增
     },
-    {
-      id: 3,
-      name: 'Extract Features For Search Engine',
-      period: 'April 2022 - May 2023',
-      role: 'Contributor',
-      description: "a search engine is essentially building a comprehensive profile of you." + 
-      " It starts with your behavior—what you've searched for, what you've clicked on, and how " + 
-      " long you've stayed on a page. This tells it about your interests and intent. It then combines " + 
-      " this with basic demographic data like your location and device type, which helps provide context. " +
-      " Finally, it analyzes your real-time actions within a single session and your long-term habits to get a full picture, " + 
-      " allowing the system to deliver highly personalized and relevant results that anticipate what you're looking for, "+
-       "even before you've fully typed it out.",
-      technologies: ['c++','python'],
-      achievements: [' improving relevance and personalization'],
-      // projectUrl: 'https://gitee.com/hengk/ctpn',
-      // demoUrl: '' // 新增
-    },
-    {
-      id: 4,
-      name: 'A Simple Transportation Management System',
-      period: 'June 2023 - Present',
-      role: 'Responsible person',
-      description: "A Transportation Management System (TMS) is a comprehensive software platform designed to streamline " + 
-      " and optimize the planning, execution, and monitoring of freight movement. It enables logistics companies to efficiently" + 
-      " manage transportation operations by automating key processes such as route planning, load optimization, carrier selection," +
-      " shipment tracking, and freight settlement. A TMS provides real-time visibility into in-transit goods through GPS tracking," + 
-      " supports electronic proof of delivery (ePOD), and facilitates collaboration among shippers, carriers, and customers." +
-      " By integrating with other enterprise systems like ERP and WMS, it enhances decision-making through data analytics and" + 
-      "reporting, ultimately helping organizations reduce transportation costs, improve delivery performance, and increase customer" + 
-      " satisfaction.",
-      technologies: ['vue','python', 'golang'],
-      achievements: ['Deliver goods to their destination at lower cost, faster speed, and higher safety.'],
-      demoUrl: 'http://49.232.89.148:8888/' // 新增
-    }
   ]
 })
 
@@ -342,13 +259,6 @@ const currentCertificates = computed(() => certificates[currentLang.value])
 
 <template>
   <div class="resume-container">
-    <!-- 语言切换按钮 -->
-    <div class="language-switch">
-      <button @click="toggleLanguage" class="lang-btn">
-        {{ t.languageSwitch }}
-      </button>
-    </div>
-
     <!-- 头部个人信息 -->
     <header class="header">
       <div class="profile-section">
